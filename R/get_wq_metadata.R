@@ -77,9 +77,7 @@ get_wq_metadata <- function (..., startDate = NULL, endDate = NULL, offset = 0, 
 
   results <- as_tibble(body$results)
   results[["startDate"]] <- lubridate::mdy(results[["startDate"]])
-  results[["startDateTime"]] <- as.POSIXct(results[["startDateTime"]] / 1000)
   results[["endDate"]] <- lubridate::mdy(results[["endDate"]])
-  results[["endDateTime"]] <- as.POSIXct(results[["endDateTime"]] / 1000)
 
   remaining <- body$totalRecords - offset - nrow(results)
   if (remaining > 0) {
