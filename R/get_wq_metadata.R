@@ -57,7 +57,7 @@ create_wq_query <- function (locations = "ALL", location_type = "STATION", param
 #' @export
 #'
 #' @examples
-#' get_wq_metadata(locations = c("G722", "BB52"), parameters = c("18", "25"),
+#' get_wq_metadata(locations = c("G722", "BB52"), parameters = c("NITRATE+NITRITE-N", "PHOSPHATE, TOTAL AS P"),
 #'                 startDate = "20190101", endDate = "20191231")
 get_wq_metadata <- function (..., startDate = NULL, endDate = NULL, offset = 0, limit = 1000, sleep = 1) {
   query <- create_wq_query(...)
